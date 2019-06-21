@@ -26,3 +26,11 @@ describe('Visit a site', function() {
     cy.visit('http://localhost:3000/')
   })
 })
+
+describe("contains hello", function() {
+  it('finds the content "hello"', function() {
+    cy.visit('http://localhost:3000/')
+
+    cy.contains('Hello')
+  })
+})
