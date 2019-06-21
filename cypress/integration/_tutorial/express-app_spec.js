@@ -43,3 +43,38 @@ describe("Click to learn", function() {
     cy.url().should('include', 'learn/more')
   })
 })
+
+describe('The contact page', function() {
+  it('Gets, types and asserts', function() {
+    cy.visit('http://localhost:3000/home')
+
+    cy.contains('contact').click()
+
+    cy.url().should('include', '/contact')
+
+    // Get an input, type into it and verify that the value has been updated
+    cy.get('#fname')
+      .type('test')
+      .should('have.value', 'test')
+  })
+})
+
+describe('Debug the contact page', function() {
+  it('Gets, types and asserts', function() {
+    cy.visit('http://localhost:3000/home')
+
+    //cy.pause()
+    cy.debug()
+
+    cy.contains('contact').click()
+
+    cy.url().should('include', '/contact')
+
+    // Get an input, type into it and verify that the value has been updated
+    cy.get('#subject')
+      .type('this is the subject')
+      .should('have.value', 'this is the subject')
+  })
+})
+
+
