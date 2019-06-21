@@ -34,3 +34,12 @@ describe("contains hello", function() {
     cy.contains('Hello')
   })
 })
+
+describe("Click to learn", function() {
+  it('finds the content "hello"', function() {
+    cy.visit('http://localhost:3000/home')
+
+    cy.contains('Learn more').click()
+    cy.url().should('include', 'learn/more')
+  })
+})
