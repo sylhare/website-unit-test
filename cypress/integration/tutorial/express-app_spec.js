@@ -22,7 +22,7 @@ describe('My First Failing test', function () {
 // If not, that’s okay too.
 
 describe('Visit a site', function() {
-  it('Visits the hellow world express site', function() {
+  it('Visits the hello world express site', function() {
     cy.visit('http://localhost:3000/')
   })
 })

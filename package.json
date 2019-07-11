@@ -4,8 +4,8 @@
   "description": "unit test of website",
   "scripts": {
     "test": "test",
-    "cypress:open": "cypress open",
-    "start": "node express-app/app.js & cypress open",
+    "start": "cypress open",
+    "tutorial": "node express-app/app.js & cypress open",
     "app": "node express-app/app.js"
   },
   "author": "sylhare",
